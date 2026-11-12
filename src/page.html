@@ -1,0 +1,467 @@
+<a class="skip" href="#start">Skip to the story</a>
+<header class="topbar">
+  <a class="brand" href="#start">{{LOGO}}<span>SmokeTrail</span></a>
+  <nav class="topnav" aria-label="Sections">
+    <a href="#start" class="opt">Journey</a>
+    <a href="#calculator">Calculator</a>
+    <a href="#methods" class="opt">Methods</a>
+    <a href="#sources">Sources</a>
+    <button id="theme-btn" class="theme-btn" type="button" aria-label="Colour theme: system. Click to change."><span class="ico" aria-hidden="true">◐</span><span class="lbl-long">Theme: </span><span class="cur">System</span></button>
+  </nav>
+</header>
+
+<main>
+<div class="scrolly" id="journey">
+  <div class="scene" id="scene">
+    {{WORLD}}
+    <div class="lens" id="lens" aria-hidden="true">{{LENS}}</div>
+    <div class="labels" id="labels" aria-hidden="true"></div>
+    <div class="scene-hud" aria-hidden="true"><b id="hud-no">Start</b><span id="hud-name">Overview</span></div>
+    <nav class="trailnav" id="trailnav" aria-label="Jump to a stop"><ol></ol></nav>
+  </div>
+
+  <div class="steps">
+
+    <!-- 0 -->
+    <section class="step first" id="start" data-stage="0">
+      <div class="card hero">
+        <p class="eyebrow">A scroll story in 12 stops</p>
+        <h1>SmokeTrail<span class="dot" aria-hidden="true"></span></h1>
+        <p class="lead">Follow the pollution from one cigarette: from the glowing coal into the smoker's lungs, out into the street, onto clothes and walls, down the drain, and into soil, plants and water.</p>
+        <div class="stats">
+          <div class="stat"><b>7,000+</b><span>chemicals in tobacco smoke, at least 69 of them known carcinogens {{c:sg2010}}</span></div>
+          <div class="stat"><b>4.5 trillion</b><span>cigarette butts discarded worldwide each year, a WHO estimate {{c:who2022}}</span></div>
+          <div class="stat"><b>1.6 million+</b><span>people who do not smoke die each year from secondhand smoke {{c:who2026}}</span></div>
+        </div>
+        <div class="ctas">
+          <a class="btn primary" href="#ignition">Start at the coal <span aria-hidden="true">↓</span></a>
+          <a class="btn" href="#calculator">Open the calculator</a>
+        </div>
+        <p class="fine">Every number links to its source. Ranges show where studies differ. Values marked <span class="derived">derived</span> were calculated here from cited figures.</p>
+      </div>
+    </section>
+
+    <!-- 1 -->
+    <section class="step" id="ignition" data-stage="1" aria-labelledby="h-ignition">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 1 of 12</span><span>Combustion</span></p>
+        <h2 id="h-ignition">Ignition: a small, hot reactor</h2>
+        <p>Lighting a cigarette starts burning and pyrolysis in a coal only a few millimetres long. During a puff, air is pulled through the coal and it reaches about 900 °C. Between puffs it keeps smouldering at a lower temperature {{c:sg2010}}.</p>
+        <p>Two streams of smoke leave the cigarette. <b>Mainstream smoke</b> is pulled through the rod and filter into the smoker's mouth during a puff. <b>Sidestream smoke</b> rises from the smouldering coal into the air around it {{c:sg2010}}.</p>
+        {{chart:temp}}
+        <ul class="facts">
+          <li><b class="num">7,000+</b><span>chemical compounds in tobacco smoke; at least 69 are known to cause cancer {{c:sg2010}}. A 2022 review lists 80 carcinogens in smoke {{c:lihecht2022}}.</span></li>
+          <li><b class="num">54%</b><span>of the tobacco burned while the cigarette smouldered between puffs (550 s), against 46% during 20 s of puffing, in a classic machine test <span class="derived">derived</span> {{c:nrc1986}}</span></li>
+          <li><b class="num">≈11</b><span>puffs per cigarette for real smokers (range 8–16), about 43 mL each {{c:zacny1996}}</span></li>
+        </ul>
+        <details class="expert">
+          <summary>For experts: machines, temperatures and yields</summary>
+          <div class="body">
+            <p>Reported temperatures differ with where and how they were measured. Between-puff values run from about 400 °C {{c:sg2010}} to 700–800 °C at the coal centre {{c:baker1974}}. Peak formation temperatures are about 900 °C for mainstream and 600 °C for sidestream smoke {{c:nrc1986}}.</p>
+            <ul>
+              <li>ISO machine regime: 35 mL puff of 2 s every 60 s, filter ventilation open. Health Canada Intense: 55 mL every 30 s, vents blocked {{c:iarc83,hammond2007}}.</li>
+              <li>EU ceilings measured with the ISO regime: 10 mg tar, 1 mg nicotine and 10 mg CO per cigarette {{c:eu2014}}. People puff harder than the machine, so these numbers understate what many smokers take in {{c:hammond2007}}.</li>
+              <li>16 constituents of smoke are IARC Group 1 carcinogens, among them benzene, formaldehyde, benzo[a]pyrene, NNK, NNN, cadmium and polonium-210 {{c:iarc100e}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="step" id="inhalation" data-stage="2" aria-labelledby="h-inhalation">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 2 of 12</span><span>The smoker</span></p>
+        <h2 id="h-inhalation">Inhalation: the lungs as a filter</h2>
+        <p>Mainstream smoke is a dense aerosol of sub-micrometre droplets in a hot gas. Its particles have a mass median diameter of about 0.35–0.40 µm {{c:iarc83}}, small enough to travel deep into the lungs. Most of what is inhaled stays in the body.</p>
+        {{chart:retention}}
+        <p>What the lungs do not keep is breathed out again: by these figures, roughly 20–40% of the particles <span class="derived">derived</span>. That exhaled smoke is the start of the next stop.</p>
+        <details class="expert">
+          <summary>For experts: deposition and its uncertainty</summary>
+          <div class="body">
+            <ul>
+              <li>Retention depends on puff volume, depth of inhalation and breath-holding. Older studies report particle retention of 90% or more, and CO retention that rarely exceeds 50% {{c:nrc1986}}.</li>
+              <li>Lung deposition modelling (MPPD) gives a total deposited fraction of 0.61 for mainstream and 0.47 for exhaled smoke particles {{c:sahu2013}}.</li>
+              <li>In mainstream smoke, nicotine is mostly in the particle phase {{c:nrc1986}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="step" id="exhale" data-stage="3" aria-labelledby="h-exhale">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 3 of 12</span><span>Into the air</span></p>
+        <h2 id="h-exhale">Out into the air: two plumes become one</h2>
+        <p>Each breath out releases what the lungs did not keep. The exhaled particles have grown to about 1.5 times their inhaled size {{c:sahu2013}}. Meanwhile the coal keeps smouldering. Sidestream smoke forms at a lower temperature with less oxygen, so for many toxicants a cigarette releases more into the air than the smoker inhales {{c:nrc1986}}.</p>
+        {{chart:ratio}}
+        <p>Secondhand smoke is the mixture of the two. Sidestream smoke supplies nearly all of its gases and over half of its particles; exhaled mainstream smoke supplies about 15–43% of the particle mass {{c:epa1992}}.</p>
+        <details class="expert">
+          <summary>For experts: ageing of the aerosol</summary>
+          <div class="body">
+            <ul>
+              <li>Fresh sidestream particles have a geometric mean diameter near 0.1 µm {{c:iarc83}}. Within seconds coagulation cuts the particle number and the particles grow.</li>
+              <li>On dilution about a quarter of the particle mass evaporates {{c:bakerproctor1990}}. In aged secondhand smoke about 95% of the nicotine is in the gas phase {{c:epa1992}}.</li>
+              <li>The ratios above fall when the machine puffs harder; for NNK and NNN they can drop below 1 {{c:iarc83}}.</li>
+              <li>The common claim that 85% of the smoke in a room is sidestream smoke traces back to a 1986 statement without primary data {{c:ota1986}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section class="step" id="dispersion" data-stage="4" aria-labelledby="h-dispersion">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 4 of 12</span><span>Dispersion</span></p>
+        <h2 id="h-dispersion">Wind: dilution, not disappearance</h2>
+        <p>Outdoors the plume is carried downwind and mixed with cleaner air. Concentrations drop steeply over the first few metres, but right next to a smoker they can be very high: within 0.5 m, peaks exceeded 1,000 µg/m³ and averages over one cigarette exceeded 200 µg/m³ {{c:klepeis2007}}.</p>
+        {{chart:distance}}
+        <ul class="facts">
+          <li><b class="num">188 vs 21</b><span>µg/m³ PM2.5 (geometric means) in 1,238 venues where people smoked and 584 smoke-free venues, in 32 countries {{c:hyland2008}}</span></li>
+          <li><b class="num">31 vs 3</b><span>µg/m³ median PM2.5 in 93 homes where someone smoked indoors and 17 smoke-free homes {{c:semple2015}}</span></li>
+        </ul>
+        <details class="expert">
+          <summary>For experts: chemistry in the air</summary>
+          <div class="body">
+            <ul>
+              <li>Gas-phase nicotine reacts with OH radicals (k = 8.4 × 10⁻¹¹ cm³ molecule⁻¹ s⁻¹), a lifetime of about 6.6 h indoors {{c:borduas2016}} and about 1–2 h outdoors in daylight {{c:aquilina2021}}.</li>
+              <li>Fine particles last much longer. An observed e-folding lifetime of accumulation-mode aerosol was about 14 days; models give 5–27 days {{c:kristiansen2016}}.</li>
+              <li>Outdoor air in cities contains about 0.4–82 ng/m³ nicotine. With a new marker, tobacco smoke made up 0.03–0.08% of outdoor PM in three cities {{c:aquilina2021}}; a 1994 Los Angeles study estimated 1.0–1.3% of fine-particle mass {{c:rogge1994}}.</li>
+              <li>For a single cigarette at low wind (0.41 m/s), levels approached background beyond about 2 m {{c:klepeis2007}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="step" id="rain" data-stage="5" aria-labelledby="h-rain">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 5 of 12</span><span>Deposition</span></p>
+        <h2 id="h-rain">Rain: washing the sky, unevenly</h2>
+        <p>Smoke leaves the air by deposition. It settles or sticks to surfaces (dry deposition), or cloud droplets and raindrops capture it (wet deposition). Raindrops catch large particles and very small ones well. Particles of 0.1–1 µm, the size of aged tobacco smoke, are the hardest to catch. This dip in efficiency is known as the Greenfield gap {{c:wang2010}}.</p>
+        {{chart:scav}}
+        <ul class="facts">
+          <li><b class="num">≈28 h</b><span>of steady rain would be needed to remove 63% of 0.1–1 µm particles at the observed coefficient of 10⁻⁵ s⁻¹ <span class="derived">derived</span></span></li>
+          <li><b class="num">&gt;99%</b><span>of dissolved nicotine is protonated in clean rain (pH about 5.6), from its pKa of 7.89 {{c:clayton2013}} <span class="derived">derived</span>. Nicotine is fully miscible with water, so gas-phase nicotine dissolves readily into drops {{c:bpdb}}.</span></li>
+        </ul>
+        <p class="fine">Gap in the evidence: we found no study that measured nicotine in rainwater itself.</p>
+        <details class="expert">
+          <summary>For experts: scavenging and solubility</summary>
+          <div class="body">
+            <ul>
+              <li>Removal of 1 µm particles by 5 mm of rain ranges from 0.1% to 30.5% depending on the parameterisation {{c:wang2010}}.</li>
+              <li>Henry's law solubility of nicotine: 3.3 × 10³ mol m⁻³ Pa⁻¹ (an estimate) {{c:sander2023}}. A pesticide database lists 9.0 × 10⁻⁴ Pa m³ mol⁻¹ {{c:bpdb}}. The two estimates differ by about a factor of 3.</li>
+              <li>In Berlin, waters receiving stormwater carried about twice as much nicotine, and canals up to 16 times more after heavy rain. The main source was butts washed off streets rather than rain itself {{c:venohr2025}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="step" id="clothes" data-stage="6" aria-labelledby="h-clothes">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 6 of 12</span><span>People as carriers</span></p>
+        <h2 id="h-clothes">Clothes, hair and skin: smoke that walks away</h2>
+        <p>Smoke compounds stick to people. Nicotine and other semi-volatile compounds sorb to hair, skin and fabric and are carried into places where nobody smoked. In a non-smoking cinema, audiences brought in 35 tobacco-related compounds on their bodies and clothes; one screening exposed the room to the equivalent of 1–10 cigarettes of secondhand smoke {{c:sheu2020}}.</p>
+        {{chart:dermal}}
+        <ul class="facts">
+          <li><b class="num">660 ng</b><span>nicotine per finger wipe on smokers, against 0.47 ng on non-smokers {{c:matt2011}}</span></li>
+          <li><b class="num">40 min</b><span>after washing with soap, nicotine on smokers' fingers was back near its starting level {{c:northrup2022}}</span></li>
+          <li><b class="num">19 months</b><span>later, fabrics still held thirdhand smoke chemicals; cotton released about 41 times more nicotine than polyester {{c:bahl2014}}</span></li>
+        </ul>
+        <details class="expert">
+          <summary>For experts: skin as a reservoir</summary>
+          <div class="body">
+            <ul>
+              <li>Hair grows about 1 cm per month, so segments of hair record nicotine exposure month by month {{c:aldelaimy2002}}.</li>
+              <li>After dermal exposure, nicotine biomarkers kept being excreted for the full 84 h of follow-up, which points to a reservoir in the skin {{c:beko2018}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="step" id="thirdhand" data-stage="7" aria-labelledby="h-thirdhand">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 7 of 12</span><span>Indoors</span></p>
+        <h2 id="h-thirdhand">Thirdhand smoke: the room remembers</h2>
+        <p>Thirdhand smoke is the residue that stays after the cigarette is out {{c:winickoff2009}}. In a furnished room, 95% to over 99% of the nicotine ended up on surfaces rather than in the air at equilibrium {{c:singer2004}}. Walls, carpets, curtains, furniture and dust become reservoirs that release nicotine back into the air {{c:singer2002,singer2003}}.</p>
+        <div class="rxn">
+          <span class="eq">nicotine <em>(on surfaces)</em> + <em>HONO</em> → <b>NNA</b> + <b>NNK</b></span>
+          <p>Nitrous acid, a common indoor pollutant, turns sorbed nicotine into tobacco-specific nitrosamines. Yield: 6.7–9.1% of the reacted nicotine by mass, about 7 parts NNA to 1 part NNK {{c:sleiman2010}}. NNK is an IARC Group 1 carcinogen {{c:iarc100e}}.</p>
+          <span class="eq">nicotine + <em>O₃</em> → <b>ultrafine particles</b>, formaldehyde</span>
+          <p>Ozone reacting with nicotine forms secondary organic aerosol, 4–9% by mass {{c:sleiman2010b}}, and on surfaces yields formaldehyde and other products {{c:destaillats2006}}.</p>
+        </div>
+        <ol class="timeline" aria-label="How long thirdhand smoke lasts">
+          <li><b>3 days</b>Almost all sorbed nicotine was still on the surfaces of a test room {{c:singer2002}}.</li>
+          <li><b>62 days</b>Homes left empty for a median of 62 days and cleaned still had more surface nicotine than former non-smoker homes (10.0 vs 1.5 µg/m²), and the new residents had more nicotine on their fingers {{c:matt2011}}.</li>
+          <li><b>3 months</b>After a casino went smoke-free, it took about 3 months for nicotine and nitrosamines in dust to fall by 90% {{c:matt2018}}.</li>
+          <li><b>19 months</b>Fabrics still held thirdhand smoke chemicals {{c:bahl2014}}.</li>
+        </ol>
+        <ul class="facts">
+          <li><b class="num">0.05–0.25 g</b><span>of dust swallowed by an infant each day, more than twice the adult rate {{c:sleiman2010}}</span></li>
+          <li><b class="num">77%</b><span>of smokers' homes (and 64% of non-smokers' homes) had settled dust in which nitrosamine cancer risk for children aged 1–6 exceeded the US EPA upper-bound risk {{c:ramirez2014}}</span></li>
+          <li><b class="num">2.4×</b><span>the odds of malignant lymphoma in cats from smoking households, in a case–control study {{c:bertone2002}}</span></li>
+        </ul>
+        <details class="expert">
+          <summary>For experts: why airing out is not enough</summary>
+          <div class="body">
+            <ul>
+              <li>Indirect routes (smoke still in the air plus re-emission from surfaces) accounted for about half of potential nicotine exposure during non-smoking periods, at all ventilation rates tested {{c:singer2003}}.</li>
+              <li>Homes of parents who smoked only outdoors had 5–7 times the contamination of non-smoker homes; smoking indoors added another 3–8 times {{c:matt2004}}.</li>
+              <li>Thirdhand smoke extracts and NNA caused DNA strand breaks in human cells; NNA is not present in fresh secondhand smoke {{c:hang2013}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 -->
+    <section class="step" id="butts" data-stage="8" aria-labelledby="h-butts">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 8 of 12</span><span>Litter</span></p>
+        <h2 id="h-butts">The butt: a filter full of what it caught</h2>
+        <p>A cigarette filter is a plug of about 12,000–15,000 cellulose acetate fibres {{c:novotny2009,green2023}}: a plastic. After smoking it holds part of what it trapped. About 6 trillion cigarettes are made each year {{c:zafeiridou2018}} and WHO estimates that 4.5 trillion butts are discarded {{c:who2022}}. In studies, 65–80% of smokers dropped their butt on the ground {{c:who2022,novotny2014,nitschke2023}}.</p>
+        <ul class="facts">
+          <li><b class="num">≈2 mg</b><span>nicotine left in a butt; about half can wash out in the first 30 minutes of rain {{c:igb2025,rodergreen2014}}</span></li>
+          <li><b class="num">≈1 butt/L</b><span>Leachate at this strength killed half of the test fish within 96 hours {{c:slaughter2011}}</span></li>
+          <li><b class="num">11 of 12</b><span>metals tested (including Pb, Cu, Zn, Ni, Cr) were found in water within a day of soaking smoked butts {{c:moerman2011}}</span></li>
+          <li><b class="num">7.5–14 years</b><span>modelled time for plastic filters to lose 99% of their mass in compost and on the soil surface {{c:joly2018}}</span></li>
+        </ul>
+        <figure class="chart">
+          <h3>96-hour LC50 of butt leachate for fish</h3>
+          <p class="sub">Butts per litre that killed half of the fish {{c:slaughter2011}}</p>
+          <div class="tablewrap"><table class="mini">
+            <thead><tr><th scope="col">Leachate from</th><th scope="col">Topsmelt (sea)</th><th scope="col">Fathead minnow (fresh)</th></tr></thead>
+            <tbody>
+              <tr><td>Smoked butts with tobacco left</td><td class="n">1.1</td><td class="n">0.97</td></tr>
+              <tr><td>Smoked filters, no tobacco</td><td class="n">1.8</td><td class="n">4.3</td></tr>
+              <tr><td>Unsmoked filters</td><td class="n">5.1</td><td class="n">13.5</td></tr>
+            </tbody>
+          </table></div>
+        </figure>
+        <details class="expert">
+          <summary>For experts: fibres, PAHs and thresholds</summary>
+          <div class="body">
+            <ul>
+              <li>Littered butts may release about 0.3 million tonnes of microfibres a year, comparable to household laundry {{c:green2023}}.</li>
+              <li>Leachate from butts contained 3.0–5.7 µg/L of PAHs between 4 hours and 21 days {{c:dobaradaran2020}}.</li>
+              <li>The Swiss ecotoxicology centre estimates that one butt can push about 1,000 L of water above the nicotine no-effect level of 2.4 µg/L {{c:oekotox2019}}.</li>
+              <li>In a field study, filters lost about 38% of their mass in two years {{c:bonanomi2015}}.</li>
+              <li>Butts and filters were the most common item on European beaches in 2014–2016, 16.7% of all items counted {{c:hanke2016}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section class="step" id="plants" data-stage="9" aria-labelledby="h-plants">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 9 of 12</span><span>Soil and plants</span></p>
+        <h2 id="h-plants">Soil and plants: nicotine in the herb bed</h2>
+        <p>A butt in soil keeps leaching. Nicotine is very water soluble and only moderately held by soil (estimated K<sub>oc</sub> ≈ 100 mL/g {{c:bpdb}}), so it can move down with water. Soil microbes also break it down quickly; one model gives a half-life of about half a day in soil {{c:seckar2008}}. Plants take it up through their roots.</p>
+        <ul class="facts">
+          <li><b class="num">&gt;20×</b><span>the EU maximum residue level: nicotine found in peppermint and basil grown with only 1 butt per m² of soil {{c:selmar2018}}</span></li>
+          <li><b class="num">0.01 mg/kg</b><span>default EU maximum residue level for nicotine in food; some herbs, spices and teas have temporary higher limits {{c:eu2023mrl}}</span></li>
+          <li><b class="num">&gt;6 mg/kg</b><span>nicotine in fresh peppermint leaves exposed to the smoke of 11 cigarettes, so leaves take it up from the air as well {{c:selmar2015}}</span></li>
+        </ul>
+        {{chart:plants}}
+        <details class="expert">
+          <summary>For experts: data quality</summary>
+          <div class="body">
+            <ul>
+              <li>The soil sorption coefficient and the 2-day soil half-life in the pesticide database are estimates, not measurements {{c:bpdb}}. We found no measured K<sub>oc</sub> in the peer-reviewed literature.</li>
+              <li>The "readily biodegradable" assessment comes from authors affiliated with the tobacco industry {{c:seckar2008}}.</li>
+              <li>The percentages in the growth chart come from press coverage; the paper's abstract reports significant reductions in germination and shoot length {{c:green2019}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section class="step" id="water" data-stage="10" aria-labelledby="h-water">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 10 of 12</span><span>Water</span></p>
+        <h2 id="h-water">Water: from the drain to the lake and the aquifer</h2>
+        <p>Rain carries butts and their leachate into storm drains; in one city survey, butts were 31% of the items found in drains {{c:kozikowski2024}}. In separate sewer systems, stormwater flows straight to streams and lakes. Nicotine also reaches water through wastewater, as cotinine and other metabolites in smokers' urine.</p>
+        {{chart:water}}
+        <ul class="facts">
+          <li><b class="num">90–99%</b><span>of cotinine removed in Swiss wastewater treatment plants; N-formylnornicotine was not removed {{c:buerge2008}}</span></li>
+          <li><b class="num">16×</b><span>higher nicotine in Berlin canals after heavy rain, mainly from washed-out butts {{c:venohr2025}}</span></li>
+          <li><b class="num">Groundwater</b><span>Nicotine has been found in aquifers beneath septic systems {{c:godfrey2007}}. We found no Swiss groundwater data on nicotine.</span></li>
+        </ul>
+        <details class="expert">
+          <summary>For experts: thresholds disagree</summary>
+          <div class="body">
+            <ul>
+              <li>The no-effect level used here (2.4 µg/L) is an EU value cited by the Swiss ecotoxicology centre {{c:oekotox2019}}. The Berlin team names 100 ng/L for water fleas {{c:igb2025}}.</li>
+              <li>Small streams with a large share of treated wastewater are expected to reach a few hundred ng/L of nicotine metabolites {{c:buerge2008}}.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section class="step" id="health" data-stage="11" aria-labelledby="h-health">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 11 of 12</span><span>Health</span></p>
+        <h2 id="h-health">Bystanders: there is no safe level</h2>
+        <p>The US Surgeon General concluded in 2006 that there is no risk-free level of exposure to secondhand smoke {{c:sg2006}}. IARC classifies involuntary smoking as carcinogenic to humans, Group 1 {{c:iarc83}}.</p>
+        {{chart:risk}}
+        <ul class="facts">
+          <li><b class="num">Children</b><span>Secondhand smoke causes sudden infant death syndrome, middle-ear disease, lower respiratory illness and asthma {{c:sg2006}}.</span></li>
+          <li><b class="num">1.6 million+</b><span>deaths a year among people who do not smoke (GBD 2023) {{c:who2026}}. For 2004 the estimate was 603,000, 28% of them children {{c:oberg2011}}.</span></li>
+          <li><b class="num">−8.2%</b><span>respiratory mortality after smoking bans in Swiss cantons {{c:vicedo2016b}}. In Graubünden, heart attacks fell 21% in the two years after its ban {{c:bonetti2011}}.</span></li>
+        </ul>
+        <details class="expert">
+          <summary>For experts: why the global numbers changed</summary>
+          <div class="body">
+            <p>Estimates of deaths from secondhand smoke rose from 603,000 (2004 data) {{c:oberg2011}} to more than 1.6 million (GBD 2023) {{c:who2026}}. The increase reflects new data and methods as well as population change, so the figures should not be read as a trend.</p>
+            <p>Early-term births fell 5.0% after Swiss smoking bans {{c:vicedo2016}}.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section class="step" id="switzerland" data-stage="12" aria-labelledby="h-switzerland">
+      <div class="card">
+        <p class="eyebrow"><span class="stopno">Stop 12 of 12</span><span>Switzerland</span></p>
+        <h2 id="h-switzerland">Switzerland in numbers</h2>
+        <div class="swiss">
+          <div class="tile"><b>24%</b><span>of people aged 15 and over smoke (2022) {{c:bfs2023}}</span></div>
+          <div class="tile"><b>7.96 billion</b><span>cigarettes taxed in 2024, about 22 million a day <span class="derived">derived</span> {{c:bazg2025}}</span></div>
+          <div class="tile"><b>≈9,200</b><span>deaths caused by smoking in 2022, about 12% of all deaths; passive smoking not included {{c:obsan_mort}}</span></div>
+          <div class="tile"><b>6.5%</b><span>exposed to secondhand smoke at least 1 hour a day, 15.8% at least 1 hour a week (2022) {{c:obsan_shs}}</span></div>
+          <div class="tile"><b>8,485</b><span>cigarette filters among 54,744 items on Swiss lake and river shores, the most common item (2020–21) {{c:iqaasl}}</span></div>
+          <div class="tile"><b>CHF 52.5 M</b><span>a year for municipalities to clean up cigarette litter, 36% of their littering costs (2010 data) {{c:bafu2011}}</span></div>
+          <div class="tile"><b>1 May 2010</b><span>federal protection against passive smoking takes effect {{c:sr81831}}</span></div>
+          <div class="tile"><b>CHF 80–100</b><span>nationwide fine for littering, butts included, since 1 August 2026 {{c:bafu_fine}}</span></div>
+        </div>
+        <p class="fine">Taxed cigarettes miss cross-border shopping and smuggling. The number of butts littered in Switzerland has not been measured.</p>
+        <div class="ctas"><a class="btn primary" href="#calculator">Scale it up in the calculator <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<section class="band" id="calculator" aria-labelledby="h-calc">
+  <div class="wrap">
+    <p class="eyebrow">Calculator</p>
+    <h2 id="h-calc">How much does it add up to?</h2>
+    <p>Scale the per-cigarette figures up to a habit or a country. Every result is a range, because emissions differ between brands and smoking styles, and littering differs between places.</p>
+    <div class="calc-grid">
+      <form id="calc-form" class="calc-controls" aria-label="Calculator settings">
+        <fieldset>
+          <legend>Start from</legend>
+          <div class="presets">
+            <button type="button" data-preset="one" aria-pressed="false">One cigarette</button>
+            <button type="button" data-preset="year" aria-pressed="true">A pack a day for a year<small>20 a day × 365 days</small></button>
+            <button type="button" data-preset="twenty" aria-pressed="false">A pack a day for 20 years<small>20 a day × 7,300 days</small></button>
+            <button type="button" data-preset="ch" aria-pressed="false">Switzerland, one year<small>7.96 billion cigarettes taxed in 2024</small></button>
+          </div>
+        </fieldset>
+        <div class="inputs" id="calc-inputs">
+          <label for="in-cpd">Per day<input id="in-cpd" type="number" inputmode="decimal" min="0" max="200" step="1" value="20"></label>
+          <label for="in-days">Days<input id="in-days" type="number" inputmode="numeric" min="0" max="40000" step="1" value="365"></label>
+          <label for="in-ppl">People<input id="in-ppl" type="number" inputmode="numeric" min="0" max="10000000" step="1" value="1"></label>
+        </div>
+        <p class="fine" id="preset-note" hidden></p>
+        <p class="total"><span>Cigarettes</span><output id="out-total" for="in-cpd in-days in-ppl">7,300</output></p>
+      </form>
+      <div class="calc-results" id="calc-results">
+        <div class="resblock" style="--c:var(--smoke)">
+          <h3><i></i>Released into the air as sidestream smoke</h3>
+          <p class="sub">Range across commercial brands {{c:iarc83}}. Smoke the smoker breathes out comes on top of this.</p>
+          <div class="tablewrap"><table class="res">
+            <thead class="sr"><tr><th scope="col">Substance</th><th scope="col">Amount</th><th scope="col">Basis</th></tr></thead>
+            <tbody>
+{{CALC_AIR}}
+            </tbody>
+          </table></div>
+        </div>
+        <div class="resblock" style="--c:var(--residue)">
+          <h3><i></i>Left behind in the butts</h3>
+          <p class="sub">Littered share 65–80%. Water volumes compare amounts with lab thresholds; real dilution and breakdown vary.</p>
+          <div class="tablewrap"><table class="res">
+            <thead class="sr"><tr><th scope="col">Item</th><th scope="col">Amount</th><th scope="col">Basis</th></tr></thead>
+            <tbody>
+{{CALC_BUTT}}
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="methods" aria-labelledby="h-methods">
+  <div class="wrap">
+    <p class="eyebrow">Methods and limits</p>
+    <h2 id="h-methods">How to read these numbers</h2>
+    <div class="cols">
+      <div>
+        <h3>Where the numbers come from</h3>
+        <ul>
+          <li>Every figure is taken from the source cited next to it. Ranges show the spread across brands, studies or methods.</li>
+          <li>Values marked <span class="derived">derived</span> were calculated on this site from cited figures, for example the share burned between puffs or the hours of rain needed to remove fine particles.</li>
+          <li>Emission factors come from smoking machines and toxicity values from laboratory tests. Real exposure depends on ventilation, wind, distance and dilution.</li>
+          <li>The landscape is a drawing, not a model. Distances in the wind stop follow the cited study; everything else is schematic.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Where sources disagree</h3>
+        <ul>
+          <li>Global deaths from secondhand smoke: 603,000 (2004 data), about 1.3 million (earlier WHO estimate) and more than 1.6 million (GBD 2023).</li>
+          <li>Chemicals in smoke: about 5,300 to more than 7,000; carcinogens: 69 to 80.</li>
+          <li>Coal temperature between puffs: about 400 °C to 800 °C.</li>
+          <li>Share of smokers who litter their butt: 65% to 80%.</li>
+          <li>Nicotine threshold for aquatic life: 2.4 µg/L or 100 ng/L.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Gaps we could not fill</h3>
+        <ul>
+          <li>No study measuring nicotine in rainwater.</li>
+          <li>No measured count of butts littered in Switzerland, and no Swiss groundwater data on nicotine.</li>
+          <li>No measured soil sorption coefficient for nicotine.</li>
+          <li>No primary data behind the often-quoted "85% sidestream" share of room smoke.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>About this site</h3>
+        <ul>
+          <li>An independent educational project. It gives no medical advice and is not affiliated with any health authority.</li>
+          <li>Corrections and better sources are welcome.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="sources" aria-labelledby="h-sources">
+  <div class="wrap">
+    <p class="eyebrow">{{NREFS}} sources</p>
+    <h2 id="h-sources">Sources</h2>
+    <ol class="refs">
+{{REFS}}
+    </ol>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>SmokeTrail {{VERSION}} · {{DATE}} · A side project by Li-Ling Tai.</p>
+    <p>Educational overview of published research. Not medical advice.</p>
+  </div>
+</footer>
